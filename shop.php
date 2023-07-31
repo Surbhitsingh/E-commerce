@@ -112,13 +112,13 @@
                                         </div>
                                         <div class="card-body">
                                             <h4 class="card-title">
-                                                <a href="detail-product.html"><?php echo $allmostProduct->title; ?></a>
+                                                <a href="http://localhost/E-commerce/products/detail-product.php?id=<?php echo $allmostProduct->id; ?>"><?php echo $allmostProduct->title; ?></a>
                                             </h4>
                                             <div class="card-price">
                                                 <!-- <span class="discount">Rp. 300.000</span> -->
                                                 <span class="reguler">&#8377;<?php echo $allmostProduct->price; ?></span>
                                             </div>
-                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allmostProduct->id; ?>" class="btn btn-block btn-primary">
+                                            <a href="http://localhost/E-commerce/products/detail-product.php?id=<?php echo $allmostProduct->id; ?>" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
 

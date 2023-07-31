@@ -5,11 +5,6 @@
 <?php 
 
 
-    if(!isset($_SESSION['username'])) {
-                
-        echo "<script> window.location.href='".APPURL."'; </script>";
-
-    }
 
 
     if(isset($_GET['id'])) {
@@ -73,7 +68,7 @@
                     <?php echo $product->title; ?>
                     </h1>
                     <p class="lead">
-                        Save time and leave the groceries to us.
+                        Save time and leave the quality on us.
                     </p>
                 </div>
             </div>

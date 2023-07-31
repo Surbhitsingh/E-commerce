@@ -1,13 +1,13 @@
 <?php require "includes/header.php"; ?>
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-header.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg_contact.jpg');">
                 <div class="container">
                     <h1 class="pt-5">
                         About Us
                     </h1>
                     <p class="lead">
-                        Save time and leave the groceries to us.
+                        Save time and leave the quality on us.
                     </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
 
                 <div class="row justify-content-center align-items-center mt-3">
                     <div class="col-md-4">
-                        <img src="assets/img/fruits.jpg" class="img-fluid">
+                        <img src="assets/img/bg_about1.jpg" class="img-fluid">
                     </div>
                     <div class="col-md-6">
                         <h5>
@@ -65,13 +65,13 @@
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <img src="assets/img/vegetables.jpg" class="img-fluid">
+                        <img src="assets/img/bg_about2.jpg" class="img-fluid">
                     </div>
                 </div>
 
                 <div class="row justify-content-center align-items-center mt-3">
                     <div class="col-md-4">
-                        <img src="assets/img/fish.jpg" class="img-fluid">
+                        <img src="assets/img/bg_about3.jpg" class="img-fluid">
                     </div>
                     <div class="col-md-6">
                         <h5>
