@@ -15,29 +15,29 @@
     $allmostProducts = $mostProducts->fetchAll(PDO::FETCH_OBJ);
 
 
-    //vigies
-    $vigies = $conn->query("SELECT * FROM products WHERE category_id = 1");
-    $vigies->execute();
-
-    $allVigies = $vigies->fetchAll(PDO::FETCH_OBJ);
-
-
-    //MEATS
-     $meats = $conn->query("SELECT * FROM products WHERE category_id = 2");
-     $meats->execute();
- 
-     $allMeats = $meats->fetchAll(PDO::FETCH_OBJ);
-
-
-    //MEATS
-    $fishes = $conn->query("SELECT * FROM products WHERE  category_id = 3");
-    $fishes->execute();
     
-    $allFishes = $fishes->fetchAll(PDO::FETCH_OBJ);
+    $shirts = $conn->query("SELECT * FROM products WHERE category_id = 1");
+    $shirts->execute();
+
+    $allshirts = $shirts->fetchAll(PDO::FETCH_OBJ);
+
+
+    
+     $shoes = $conn->query("SELECT * FROM products WHERE category_id = 2");
+     $shoes->execute();
+ 
+     $allshoes = $shoes->fetchAll(PDO::FETCH_OBJ);
+
+
+    
+    $jeans = $conn->query("SELECT * FROM products WHERE  category_id = 3");
+    $jeans->execute();
+    
+    $alljeans = $jeans->fetchAll(PDO::FETCH_OBJ);
 
 
 
-    //ACTIVE WEAR
+    
     $active = $conn->query("SELECT * FROM products WHERE  category_id = 4");
     $active->execute();
        
@@ -50,7 +50,7 @@
 
 ?>
     <div id="page-content" class="page-content">
-        <div class="banner"'>
+        <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style=" background-image: url('assets/img/bg_shop.jpg');">
                 <div class="container">
                     <h1 class="pt-5">
@@ -115,7 +115,6 @@
                                                 <a href="http://localhost/E-commerce/products/detail-product.php?id=<?php echo $allmostProduct->id; ?>"><?php echo $allmostProduct->title; ?></a>
                                             </h4>
                                             <div class="card-price">
-                                                <!-- <span class="discount">Rp. 300.000</span> -->
                                                 <span class="reguler">&#8377;<?php echo $allmostProduct->price; ?></span>
                                             </div>
                                             <a href="http://localhost/E-commerce/products/detail-product.php?id=<?php echo $allmostProduct->id; ?>" class="btn btn-block btn-primary">
@@ -139,7 +138,7 @@
                     <div class="col-md-12">
                         <h2 class="title">Shirts and Tops</h2>
                         <div class="product-carousel owl-carousel">
-                            <?php foreach($allVigies as $allvigi) : ?>
+                            <?php foreach($allshirts as $shirt) : ?>
                                 <div class="item">
                                     <div class="card card-product">
                                         <div class="card-badge">
@@ -148,16 +147,16 @@
                                                     20% OFF
                                                 </span>
                                             </div>
-                                            <img src="http://localhost/E-commerce/assets/img/product/<?php echo $allvigi->image; ?>" alt="Card image 2" class="card-img-top">
+                                            <img src="http://localhost/E-commerce/assets/img/product/<?php echo $shirt->image; ?>" alt="Card image 2" class="card-img-top">
                                         </div>
                                         <div class="card-body">
                                             <h4 class="card-title">
-                                                <a href="detail-product.html"><?php echo $allvigi->title; ?></a>
+                                                <a href="detail-product.html"><?php echo $shirt->title; ?></a>
                                             </h4>
                                             <div class="card-price">
-                                                <span class="reguler">&#8377; <?php echo $allvigi->price; ?></span>
+                                                <span class="reguler">&#8377; <?php echo $shirt->price; ?></span>
                                             </div>
-                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allvigi->id; ?>" class="btn btn-block btn-primary">
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $shirt->id; ?>" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
 
@@ -178,7 +177,7 @@
                     <div class="col-md-12">
                         <h2 class="title">Shoes</h2>
                         <div class="product-carousel owl-carousel">
-                           <?php foreach($allMeats as $meat) : ?> 
+                           <?php foreach($allshoes as $shoe) : ?> 
                             <div class="item">
                                 <div class="card card-product">
                                     <div class="card-badge">
@@ -187,16 +186,16 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="http://localhost/E-commerce/assets/img/product/<?php echo $meat->image; ?>" alt="Card image 2" class="card-img-top">
+                                        <img src="http://localhost/E-commerce/assets/img/product/<?php echo $shoe->image; ?>" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html"><?php echo $meat->title; ?></a>
+                                            <a href="detail-product.html"><?php echo $shoe->title; ?></a>
                                         </h4>
                                         <div class="card-price">
-                                            <span class="reguler">&#8377; <?php echo $meat->price; ?></span>
+                                            <span class="reguler">&#8377; <?php echo $shoe->price; ?></span>
                                         </div>
-                                        <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $meat->id; ?>" class="btn btn-block btn-primary">
+                                        <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $shoe->id; ?>" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
 
@@ -217,7 +216,7 @@
                     <div class="col-md-12">
                         <h2 class="title">Jeans</h2>
                         <div class="product-carousel owl-carousel">
-                            <?php foreach($allFishes as $fish) : ?>
+                            <?php foreach($alljeans as $jean) : ?>
                                 <div class="item">
                                     <div class="card card-product">
                                         <div class="card-badge">
@@ -226,16 +225,16 @@
                                                     20% OFF
                                                 </span>
                                             </div>
-                                            <img src="http://localhost/E-commerce/assets/img/product/<?php echo $fish->image; ?>" alt="Card image 2" class="card-img-top">
+                                            <img src="http://localhost/E-commerce/assets/img/product/<?php echo $jean->image; ?>" alt="Card image 2" class="card-img-top">
                                         </div>
                                         <div class="card-body">
                                             <h4 class="card-title">
-                                                <a href="detail-product.html"><?php echo $fish->title; ?></a>
+                                                <a href="detail-product.html"><?php echo $jean->title; ?></a>
                                             </h4>
                                             <div class="card-price">
-                                                <span class="reguler">&#8377; <?php echo $fish->price; ?></span>
+                                                <span class="reguler">&#8377; <?php echo $jean->price; ?></span>
                                             </div>
-                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $fish->id; ?>" class="btn btn-block btn-primary">
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $jean->id; ?>" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
 
